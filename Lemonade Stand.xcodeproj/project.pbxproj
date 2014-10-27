@@ -13,6 +13,12 @@
 		F9041BE819FD92B900E55A7A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9041BE719FD92B900E55A7A /* Images.xcassets */; };
 		F9041BEB19FD92B900E55A7A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9041BE919FD92B900E55A7A /* LaunchScreen.xib */; };
 		F9041BF719FD92B900E55A7A /* Lemonade_StandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9041BF619FD92B900E55A7A /* Lemonade_StandTests.swift */; };
+		F9041C0119FD974600E55A7A /* lemonade-stand-300x300.png in Resources */ = {isa = PBXBuildFile; fileRef = F9041C0019FD974600E55A7A /* lemonade-stand-300x300.png */; };
+		F9041C0519FD9B3D00E55A7A /* lemonade-stand-300x3002 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = F9041C0419FD9B3D00E55A7A /* lemonade-stand-300x3002 copy.png */; };
+		F9041C0719FDA13400E55A7A /* 165629420.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9041C0619FDA13400E55A7A /* 165629420.jpg */; };
+		F9041C0919FDA23F00E55A7A /* 165629420 copy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9041C0819FDA23F00E55A7A /* 165629420 copy.jpg */; };
+		F9041C0B19FDA56400E55A7A /* Lemon.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F9041C0A19FDA56400E55A7A /* Lemon.jpeg */; };
+		F9041C0D19FDA5F200E55A7A /* small_molded_ice_cube_set.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9041C0C19FDA5F200E55A7A /* small_molded_ice_cube_set.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,12 @@
 		F9041BF019FD92B900E55A7A /* Lemonade StandTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lemonade StandTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9041BF519FD92B900E55A7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9041BF619FD92B900E55A7A /* Lemonade_StandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lemonade_StandTests.swift; sourceTree = "<group>"; };
+		F9041C0019FD974600E55A7A /* lemonade-stand-300x300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lemonade-stand-300x300.png"; sourceTree = "<group>"; };
+		F9041C0419FD9B3D00E55A7A /* lemonade-stand-300x3002 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lemonade-stand-300x3002 copy.png"; sourceTree = "<group>"; };
+		F9041C0619FDA13400E55A7A /* 165629420.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 165629420.jpg; sourceTree = "<group>"; };
+		F9041C0819FDA23F00E55A7A /* 165629420 copy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "165629420 copy.jpg"; sourceTree = "<group>"; };
+		F9041C0A19FDA56400E55A7A /* Lemon.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Lemon.jpeg; sourceTree = "<group>"; };
+		F9041C0C19FDA5F200E55A7A /* small_molded_ice_cube_set.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = small_molded_ice_cube_set.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +102,12 @@
 		F9041BDE19FD92B900E55A7A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F9041C0C19FDA5F200E55A7A /* small_molded_ice_cube_set.jpg */,
+				F9041C0A19FDA56400E55A7A /* Lemon.jpeg */,
+				F9041C0819FDA23F00E55A7A /* 165629420 copy.jpg */,
+				F9041C0619FDA13400E55A7A /* 165629420.jpg */,
+				F9041C0419FD9B3D00E55A7A /* lemonade-stand-300x3002 copy.png */,
+				F9041C0019FD974600E55A7A /* lemonade-stand-300x300.png */,
 				F9041BDF19FD92B900E55A7A /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -192,8 +210,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9041C0519FD9B3D00E55A7A /* lemonade-stand-300x3002 copy.png in Resources */,
+				F9041C0B19FDA56400E55A7A /* Lemon.jpeg in Resources */,
+				F9041C0719FDA13400E55A7A /* 165629420.jpg in Resources */,
+				F9041C0119FD974600E55A7A /* lemonade-stand-300x300.png in Resources */,
 				F9041BE619FD92B900E55A7A /* Main.storyboard in Resources */,
+				F9041C0D19FDA5F200E55A7A /* small_molded_ice_cube_set.jpg in Resources */,
 				F9041BEB19FD92B900E55A7A /* LaunchScreen.xib in Resources */,
+				F9041C0919FDA23F00E55A7A /* 165629420 copy.jpg in Resources */,
 				F9041BE819FD92B900E55A7A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
