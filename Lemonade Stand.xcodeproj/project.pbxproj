@@ -19,6 +19,11 @@
 		F9041C0919FDA23F00E55A7A /* 165629420 copy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9041C0819FDA23F00E55A7A /* 165629420 copy.jpg */; };
 		F9041C0B19FDA56400E55A7A /* Lemon.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F9041C0A19FDA56400E55A7A /* Lemon.jpeg */; };
 		F9041C0D19FDA5F200E55A7A /* small_molded_ice_cube_set.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9041C0C19FDA5F200E55A7A /* small_molded_ice_cube_set.jpg */; };
+		F9041C0F19FEC08D00E55A7A /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9041C0E19FEC08D00E55A7A /* Factory.swift */; };
+		F9041C1119FECC2B00E55A7A /* Lemonade.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9041C1019FECC2B00E55A7A /* Lemonade.swift */; };
+		F9041C1319FEFD7500E55A7A /* weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9041C1219FEFD7500E55A7A /* weather.swift */; };
+		F9041C151A002E0E00E55A7A /* behind_alert_view.png in Resources */ = {isa = PBXBuildFile; fileRef = F9041C141A002E0E00E55A7A /* behind_alert_view.png */; };
+		F9041C191A007E8300E55A7A /* WeatherModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9041C181A007E8300E55A7A /* WeatherModal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +53,11 @@
 		F9041C0819FDA23F00E55A7A /* 165629420 copy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "165629420 copy.jpg"; sourceTree = "<group>"; };
 		F9041C0A19FDA56400E55A7A /* Lemon.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Lemon.jpeg; sourceTree = "<group>"; };
 		F9041C0C19FDA5F200E55A7A /* small_molded_ice_cube_set.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = small_molded_ice_cube_set.jpg; sourceTree = "<group>"; };
+		F9041C0E19FEC08D00E55A7A /* Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
+		F9041C1019FECC2B00E55A7A /* Lemonade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lemonade.swift; sourceTree = "<group>"; };
+		F9041C1219FEFD7500E55A7A /* weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = weather.swift; sourceTree = "<group>"; };
+		F9041C141A002E0E00E55A7A /* behind_alert_view.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = behind_alert_view.png; sourceTree = "<group>"; };
+		F9041C181A007E8300E55A7A /* WeatherModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherModal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,10 +101,14 @@
 			children = (
 				F9041BE019FD92B900E55A7A /* AppDelegate.swift */,
 				F9041BE219FD92B900E55A7A /* ViewController.swift */,
+				F9041C181A007E8300E55A7A /* WeatherModal.swift */,
+				F9041C0E19FEC08D00E55A7A /* Factory.swift */,
+				F9041C1019FECC2B00E55A7A /* Lemonade.swift */,
 				F9041BE419FD92B900E55A7A /* Main.storyboard */,
 				F9041BE719FD92B900E55A7A /* Images.xcassets */,
 				F9041BE919FD92B900E55A7A /* LaunchScreen.xib */,
 				F9041BDE19FD92B900E55A7A /* Supporting Files */,
+				F9041C1219FEFD7500E55A7A /* weather.swift */,
 			);
 			path = "Lemonade Stand";
 			sourceTree = "<group>";
@@ -102,6 +116,7 @@
 		F9041BDE19FD92B900E55A7A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F9041C141A002E0E00E55A7A /* behind_alert_view.png */,
 				F9041C0C19FDA5F200E55A7A /* small_molded_ice_cube_set.jpg */,
 				F9041C0A19FDA56400E55A7A /* Lemon.jpeg */,
 				F9041C0819FDA23F00E55A7A /* 165629420 copy.jpg */,
@@ -179,6 +194,7 @@
 				TargetAttributes = {
 					F9041BDA19FD92B900E55A7A = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = CCV355HTE8;
 					};
 					F9041BEF19FD92B900E55A7A = {
 						CreatedOnToolsVersion = 6.1;
@@ -215,6 +231,7 @@
 				F9041C0719FDA13400E55A7A /* 165629420.jpg in Resources */,
 				F9041C0119FD974600E55A7A /* lemonade-stand-300x300.png in Resources */,
 				F9041BE619FD92B900E55A7A /* Main.storyboard in Resources */,
+				F9041C151A002E0E00E55A7A /* behind_alert_view.png in Resources */,
 				F9041C0D19FDA5F200E55A7A /* small_molded_ice_cube_set.jpg in Resources */,
 				F9041BEB19FD92B900E55A7A /* LaunchScreen.xib in Resources */,
 				F9041C0919FDA23F00E55A7A /* 165629420 copy.jpg in Resources */,
@@ -236,8 +253,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9041C1319FEFD7500E55A7A /* weather.swift in Sources */,
 				F9041BE319FD92B900E55A7A /* ViewController.swift in Sources */,
 				F9041BE119FD92B900E55A7A /* AppDelegate.swift in Sources */,
+				F9041C1119FECC2B00E55A7A /* Lemonade.swift in Sources */,
+				F9041C191A007E8300E55A7A /* WeatherModal.swift in Sources */,
+				F9041C0F19FEC08D00E55A7A /* Factory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,7 +339,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -352,8 +373,9 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -362,9 +384,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Lemonade Stand/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -372,9 +398,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Joseph Egan (CCV355HTE8)";
 				INFOPLIST_FILE = "Lemonade Stand/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -431,6 +461,7 @@
 				F9041BFC19FD92B900E55A7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F9041BFD19FD92B900E55A7A /* Build configuration list for PBXNativeTarget "Lemonade StandTests" */ = {
 			isa = XCConfigurationList;
@@ -439,6 +470,7 @@
 				F9041BFF19FD92B900E55A7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

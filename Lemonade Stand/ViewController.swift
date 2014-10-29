@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var purchasedIceCubesLabel: UILabel!
     @IBOutlet weak var mixedLemonsLabel: UILabel!
     @IBOutlet weak var mixedIceCubeLabels: UILabel!
+    @IBOutlet weak var weatherIconImage: UIImageView!
     
     var totalMoney = 10
     var lemons = 0
@@ -31,16 +32,31 @@ class ViewController: UIViewController {
     
     let lemonPrice = 2
     let iceCubePrice = 1
+    var weatherType = "HOT"
+    var weatherImage = UIImage(named:"Mild")
+    
+    //hold weather for day
+    var todaysWeather = (weatherType:"", image: UIImage(named:"Mild")!  )
+    
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        upDateGame()
-     
         
+        upDateGame()
+    
+      
 
+    }
+    
+    override func viewDidAppear(animated:Bool)
+    {
+        todaysWeather  = Weather.buildWeather()
+        weatherType = todaysWeather.weatherType
+        weatherImage = todaysWeather.image
+        displayWeatherAlert(todaysWeather)
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,11 +69,12 @@ class ViewController: UIViewController {
      if totalMoney > 0
      {
         lemonsInCart += 1
-  
+        lemons += 1
+         totalMoney -= lemonPrice
         upDateGame()
     }else
     {
-    showAlertWithText( message: "You need some money to buy lemons!")
+    showAlertWithText( message: "You need some money to buy lemons!", endOfDay:false )
     }
     }
 
@@ -66,6 +83,8 @@ class ViewController: UIViewController {
         if lemonsInCart > 0
         {
         lemonsInCart -= 1
+        lemons -= 1
+        totalMoney += lemonPrice
         }
     
         upDateGame()
@@ -79,12 +98,13 @@ class ViewController: UIViewController {
        {
         
         iceCubesInCart += 1
-     
+        iceCubes += 1
+      totalMoney -= iceCubePrice
         upDateGame()
         
     }else
     {
-    showAlertWithText( message: "You need some money to buy Ice Cubes!")
+    showAlertWithText( message: "You need some money to buy Ice Cubes!", endOfDay:false )
     }
     
     }
@@ -95,6 +115,8 @@ class ViewController: UIViewController {
         if iceCubesInCart > 0
         {
          iceCubesInCart -= 1
+            iceCubes -= 1
+             totalMoney += iceCubePrice
         }
     
         upDateGame()
@@ -108,7 +130,7 @@ class ViewController: UIViewController {
         upDateGame()
         }else
         {
-            showAlertWithText( message: "You need some lemons!")
+            showAlertWithText( message: "You need some lemons!", endOfDay:false )
         }
         
     
@@ -131,7 +153,7 @@ class ViewController: UIViewController {
          upDateGame()
     }else
     {
-    showAlertWithText( message: "You need some Ice!")
+    showAlertWithText( message: "You need some Ice!",endOfDay:false )
     }
     
     }
@@ -144,36 +166,46 @@ class ViewController: UIViewController {
         }
     }
 
-    @IBAction func purchaseButton(sender: UIButton) {
-        
-    var lemonPriceForPurchase = lemonsInCart * lemonPrice
-    var iceCubesPriceForPurchase = iceCubesInCart * iceCubePrice
-        
-        var totalPurchasePrice = lemonPriceForPurchase + iceCubesPriceForPurchase
-        
-       
-        
-        if totalMoney >= totalPurchasePrice
-        {
-            
-            updateMoney(totalPurchasePrice, calculation: true)
-            
-            lemons = lemons + lemonsInCart
-            iceCubes = iceCubes + iceCubesInCart
-            lemonsInCart = 0
-            iceCubesInCart = 0
-            
-            upDateGame()
-        }else
-        {
-            showAlertWithText( message: "Sorry, you do not have enough money for this purchase")
-        }
-        
-    }
-
     
     
     @IBAction func startTheDayButton(sender: UIButton) {
+
+        if lemonsInMix == 0 && iceCubesInMix == 0
+        {
+        showAlertWithText( message: "You need to mix some lemonade first",endOfDay:false )
+
+        
+        }else{
+          
+            
+      var dailySales = Factory.startDay(lemonsInMix, iceInMix: iceCubesInMix, weather: todaysWeather.weatherType)
+            
+        totalMoney += dailySales
+        lemonsInMix = 0
+        iceCubesInMix = 0
+            lemonsInCart = 0
+            iceCubesInCart = 0
+            
+             todaysWeather = Weather.buildWeather();
+            weatherType = todaysWeather.weatherType
+            weatherImage = todaysWeather.image
+            
+            if dailySales > 0
+            {
+                showAlertWithText( header: "Congrats" , message: " Today you made $ \(dailySales)", endOfDay:true )
+            }
+            else if (dailySales <= 0)
+            {
+                showAlertWithText( header: "Sorry" , message: " You made no money today", endOfDay:true )
+
+            }
+           
+            
+            upDateGame()
+           
+            
+            
+        }
     }
 
     func upDateGame()
@@ -211,15 +243,44 @@ class ViewController: UIViewController {
         }
     }
     
-    func showAlertWithText(header: String = "Warning", message:String)
+    func showAlertWithText(header: String = "Warning", message:String, endOfDay:Bool)
     {
         
         var alert = UIAlertController(title: header, message: message, preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default){
+            UIAlertAction in
+            if endOfDay{
+                self.displayWeatherAlert(self.todaysWeather)}
+            }
+)
         
-        self.presentViewController(alert, animated: true, completion: nil)
+
+        
+        self.presentViewController(alert, animated: true, completion:nil )
+        
         
     }
+    
 
+    
+    func displayWeatherAlert(typeOfWeather:(weatherType:String, image:UIImage)){
+      
+    
+       [ performSegueWithIdentifier( "weatherModal", sender:self)]
+        
+    
+    }
+
+    @IBAction func returnToStepOne(segue: UIStoryboardSegue )
+    {
+       [dismissViewControllerAnimated(true, completion:nil)]
+    }
+    
+    override func prepareForSegue(segue: (UIStoryboardSegue!), sender: AnyObject!) {
+        let controller = segue.destinationViewController as ModalController
+        controller.weatherType  = weatherType
+        controller.weatherImage = weatherImage
+    }
+    
 }
 
